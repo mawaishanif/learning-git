@@ -10,5 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: pwd && ls
-      - run: echo ${{ secrets.DEPLOYER_KEY }}
+      - run: 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+      - run: eval $(ssh-agent -s)
+      - run: ssh-add ${{ secrets.DEPLOYER_KEY }}
+      - run: mkdir -p ~/.ssh
 #       - run: composer require laravel/envoy --dev
