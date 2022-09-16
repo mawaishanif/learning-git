@@ -12,6 +12,10 @@ jobs:
       - run: pwd && ls
       - run: 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
       - run: eval $(ssh-agent -s)
-      - run: ssh-add ${{ secrets.DEPLOYER_KEY }}
+      - run: echo ${{ secrets.DEPLOYER_KEY }} >> skey
+      - run: chmod 700 ./skey
+      - name: Add SSH Key
+        run: ssh-add ./skey
+        shell: bash
       - run: mkdir -p ~/.ssh
 #       - run: composer require laravel/envoy --dev
