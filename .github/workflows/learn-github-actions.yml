@@ -9,5 +9,5 @@ jobs:
     container: composer:2.3
     steps:
       - uses: actions/checkout@v3
-      - run: rm composer.json composer.lock
-      - run: composer require laravel/envoy --dev
+      - run: pwd && ls
+#       - run: composer require laravel/envoy --dev
