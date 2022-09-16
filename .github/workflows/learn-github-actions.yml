@@ -10,4 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: pwd && ls
+      - run: ssh -v && ssh-add
+      - run: echo ${{ secrets.DEPLOYER_KEY }}
 #       - run: composer require laravel/envoy --dev
