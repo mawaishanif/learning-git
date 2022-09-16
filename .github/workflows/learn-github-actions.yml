@@ -1,12 +1,13 @@
-name: learn-github-actions
-on: [push]
+name: deploy-to-staging-server
+on:
+  push:
+    branches:
+      - main
 jobs:
-  check-bats-version:
+  deploy:
     runs-on: ubuntu-latest
+    container: composer:2.3
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      - run: rm composer.json composer.lock
+      - run: composer require laravel/envoy --dev
