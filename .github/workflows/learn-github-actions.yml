@@ -9,13 +9,7 @@ jobs:
     container: composer:2.3
     steps:
       - uses: actions/checkout@v3
-      - run: pwd && ls
-      - run: 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-      - run: eval $(ssh-agent -s)
-      - run: echo ${{ secrets.DEPLOYER_KEY }} >> skey
-      - run: chmod 700 ./skey
-      - name: Add SSH Key
-        run: ssh-add ./skey
-        shell: bash
-      - run: mkdir -p ~/.ssh
-#       - run: composer require laravel/envoy --dev
+      - uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.DEPLOYER_KEY }}
+      - run: composer require laravel/envoy --dev
