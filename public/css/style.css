@@ -1,0 +1,560 @@
+    
+
+.logo_div{
+    display: flex;
+    flex-direction: column ;
+    align-items: center !important;
+    border-bottom: .5px solid #f7f7f7;
+    margin: auto;
+    max-width: 40%;
+}
+
+.navigation_links{
+    /* height: 300px; */
+    border-bottom: .5px solid #f1f0f0;
+}
+
+.navbar{
+    flex-direction: column;
+    justify-content: space-evenly !important;
+    align-items: unset !important;
+    background-color: rgb(250, 250, 250) !important;
+    border-right: .5px solid #f1f0f0;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    overflow: scroll;
+    width: 27%;
+    height: 100%;
+    transition: 0.2s ease-out;
+}
+.navbar-animate{
+    transform: translateX(10%);
+
+}
+.bottom_navigation_links{
+    border-bottom: .5px solid #f1f0f0;
+    display: flex ;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.nav.navbar-nav{
+    height: 100vh;
+}
+.nav-link{
+    color: rgb(51, 51, 51) !important;
+    text-decoration: none;
+    margin: 5px !important;
+}
+.nav-link:hover{
+    color: #ff4500 !important;
+    background-color: #f1f0f0!important;
+}
+.fox_logo{
+    width: 100px;
+    margin: 0 auto;
+}
+.image_text_nav{
+    text-align : center !important;
+}
+.fox_icon{
+    color: #ff4500;
+    font-size: 20px;
+    margin: 5px;
+}
+.app_button{
+    background-color: #ff4500;
+    color: white !important;
+    padding: 10px 8px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+.app_button:hover{
+    box-shadow: none !important;
+
+}
+.nav-link.nav_link_button{
+    background: none !important;
+    text-align: center; 
+    border : none !important;
+}
+
+.pixel_body_container{
+    position: relative !important;
+    height: 100vmin;
+    background: #ccc;
+}
+.tab_body{
+    width: 77%;
+    position: absolute;
+    right: 0px !important;
+}
+.nav_tab_switches{
+    padding: 0px !important;
+    width: 95% !important;
+    height: 35px !important;
+    border: unset !important;
+    border-radius: unset !important;
+    text-decoration: none !important; 
+    font-size: 14px;
+
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color: #f5f5f5 !important;
+    color: #ff4500 !important;
+   
+}
+.modal-dialog{
+    max-width: 80% !important;
+}
+.tab_body{
+    width: 73%;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+.search_box_pixel{
+    position: relative;
+    padding-left: 27px;
+    width: 87%;
+    height: 40px;
+    border: none !important;    
+    outline : none !important;
+}
+.search_box_pixel:focus{
+    outline: none !important;
+    border: none !important;
+}
+.search_box_pixel:active{
+    outline: none !important;
+    border: none !important;
+}
+.search_icon{
+    position: absolute;
+    left: 17px !important;
+    top: 19px;
+    font-size: 17px;
+}
+.search_box_div{
+    position: relative;
+    margin-top: 15px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 3px;
+    width: 80% !important;
+    margin: 15px auto;
+}
+.search_pixel_button{
+    background-color: #ff4500;
+    color: white;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.search_pixel_button:hover{
+    color : white;
+}
+.table_div_pixel{
+    width: 80% ;
+    margin: 15px auto;
+    background-color: white;
+}
+
+.search_box_pixel.search_box_modal{
+    border: 1px solid #d1d0d0 !important;
+}
+.search_box_pixel.search_box_modal:active{
+    border: 1px solid #d1d0d0 !important;
+}
+.bi.bi-x-circle.fox_icon{
+    cursor: pointer;
+
+}
+input[type='radio']:focus{
+    border: none !important;
+    background: none !important;
+    outline : none !important;
+    box-shadow: none !important;
+}
+.form-check-input:checked{
+    background-color: unset !important;
+    border-color: unset !important;
+}
+
+input[type='radio']:after{
+    width: 25px;
+    height: 109px;
+    border-radius: 128px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #e90000;
+    content: '';
+    display: inline-block;
+    visibility: hidden;
+    border: 2px solid #ff0000;
+}
+input[type='radio']:checked:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: #ffffff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 4px solid #ff4500;
+}
+.btn:focus{
+    box-shadow: none !important;
+}
+.btn.save_cpixel_modal{
+    color: white !important;
+    background-color: #ff4500;
+    width: 130px;
+}
+.btn.close_cpixel_modal{
+    color: #ff4500;
+}
+a{
+    text-decoration: none;
+}
+
+.modal_field_2{
+    margin: 8px;
+}
+
+.icon_cross{
+    font-size: 20px;
+    color: black  !important;
+}
+.icon_check{
+    color: #ff4500;
+    font-size: 20px;
+}
+.action_icon{
+    font-size: 20px;
+    color: grey;
+}
+thead *{
+    color: #ff4500 !important;
+}
+
+
+td:hover tr{
+    color: #ff4500;
+}
+tr:hover{
+    color: #ff4500;
+}
+
+tr:hover td{
+    color: #ff4500;
+}
+tr:hover .action_icon{
+    color: #ff4500;
+}
+
+.search_box_pixel.search_box_modal::placeholder{
+    color: #ff4500;
+}
+.switch {
+    transform: scale(0.8);
+    position: relative;
+    width: 40px ;
+    height: 20px;
+    top: 17%;
+}
+.slider{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.switch input{
+    display: none;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+input:checked + .slider{
+    background-color: #ff4500;
+}
+input:checked + .slider:before{
+    transform: translateX(20px);
+}
+.action_icon{
+    cursor: pointer;
+    margin: 5px;
+}
+.card_custom_class{
+    width: 30%;
+    margin: 10px;
+    height: 650px;
+}
+.btn-danger:hover{
+    background: #ff4500;
+    border-color: #ff4500;
+}
+.btn-check:focus+.btn-danger, .btn-danger:focus{
+    background-color: #ff4500;
+}
+.search_pixel_button.ctc_2{
+    width: 22%;
+}
+.search_pixel_button.clip_button{
+    position: absolute;
+    right: 25%;
+}
+#tableInterset{
+    width: 80%;
+    background: white;
+    margin: 10px auto;
+}
+.btn-danger{
+    background-color: #ff4500;
+    border-color: #ff4500;
+}
+.benefits_payment_modal{
+    list-style-type: none;
+    padding: 0px;
+}
+.benefits_payment_modal li{
+    margin: 20px auto;
+    padding: 0px;
+    border-bottom: .5px solid #ccc;
+    width: 100%;
+}
+.plan_selection_button{
+    background-color: #ff4500 !important;
+    color: white !important;
+    border: none !important;
+    outline : none !important;
+    padding: 10px 40px;
+    border-radius: 4px;
+}
+.card-body{
+    margin: 5px auto;
+    width: 100%;
+}
+.payment_modal_price{
+    position: absolute;
+    font-size: 25px;
+    top: 28%;
+    left: 22%;
+    font-weight: bolder;
+    color: white !important;
+    margin: 0px;
+}
+
+.price_circle{
+    width: 140px;
+    height: 140px;
+    margin: auto !important;
+    background-color: #ff4500;
+    border-radius: 140px;
+    text-align: center;
+    padding: 5px;
+    padding-top: 30px;
+    border: 2px solid white;
+    position: relative;
+}
+
+.price-circle-border{
+    background-color: #ff4500;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    padding-top: 5px;
+    margin: 5px auto;
+    transform: translateX(5px);
+}
+
+.price_text_payment_modal{
+    color: white !important;
+    margin: 0px;
+    position: absolute;
+    top: 50% ;
+    left: 25%;
+}
+.card_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0%);
+}
+.accordion_div_faq{
+    width: 80% ;
+    margin:10px auto;
+}
+
+.accordion-button:focus {
+     z-index: 3; 
+     border-color:none !important; 
+     outline: none !important; 
+     box-shadow: none !important; 
+}
+.accordion-button:not(.collapsed) {
+    color: #ff4500;
+    background-color: #ffffff;
+}
+.icon_contact_box{
+    background: white !important;
+    margin: 5px;
+    width: 40%;
+    text-align : center !important;
+}
+.row_contact_icon_box{
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.box_logo_end{
+    font-size: 50px;
+}
+
+.card-body_2{
+    margin: 50px auto !important;
+    width: 90% !important;
+}
+
+.px_text_search_box{
+    background-color: #ccc;
+    padding: 5px;
+}
+
+
+.send_button_pixel_contact{
+    background-color: #ff4500;
+    color: white !important;
+    padding: 5px 20px;
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.form-control{
+    margin-bottom: 15px;
+}
+.more_help{
+    margin-top: 15px;
+}
+
+.alert_symbol{
+    margin-right: 5px;
+    color: black !important;
+}
+
+.alert_label{
+    /* font-weight: bold; */
+    font-size: 20px;
+}
+.server_text{
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.alert_label input{
+    margin-right: 5px;
+}
+.search_box_pixel.modal_input_alert{
+    display: block;
+}
+.btn_tooltip{
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+}
+.alert_modal{
+    margin-top: 5px;
+}
+.alert-danger{
+    font-size: 14px;
+}
+
+.form-check.form-check-inline .form-check-input{
+    margin-top: 10px;
+}
+.tooltip_pixel{
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip_pixel .tooltiptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip_pixel:hover .tooltiptext {
+    visibility: visible;
+  }
+  .google_translate_element{
+      margin: auto !important;
+      transform: translateX(50%);
+  }
+  #update {
+    display: none;
+}
+ul.select2-choices {
+    padding-right: 30px !important;
+}
+
+ul.select2-choices:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid #333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.chosen-container{
+    width: 540px !important;
+}
+.toast-top-center {
+    top: 12px;
+    left:50%;
+    margin:0 0 0 -150px;
+}
+
+a#selctiobtn {
+    color: #ffffff;
+}
+.yt_button{
+    width: 82%;
+}
+
+
+
+.bi.bi-camera-video-fill{
+    margin-right: 4px;
+}
