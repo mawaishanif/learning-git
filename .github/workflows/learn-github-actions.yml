@@ -13,4 +13,4 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DEPLOYER_KEY }}
       - run: composer require laravel/envoy --dev
-      - run:  ./vendor/bin/envoy run deploy
+      - run:  ./vendor/bin/envoy run deploy --password ${{ secrets.GITHUB.token }}

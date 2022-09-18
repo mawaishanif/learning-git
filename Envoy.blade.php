@@ -1,7 +1,7 @@
 @servers(['web' => 'deployer@165.227.216.24'])
 
 @setup
-    $repository = "https://{$username}:{$password}@gitlab.com/robust-agency/shopify-apps/ss-shopify-dropshipping-app.git";
+    $repository = "https://mawaishanif:{$password}@github.com/mawaishanif/learning-git.git";
     $releases_dir = '/var/www/app/releases';
     $app_dir = '/var/www/app';
     $release = date('Y_m_d_H_i_s');
