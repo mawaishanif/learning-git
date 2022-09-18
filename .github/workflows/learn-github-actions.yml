@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     container: composer:2.3
     steps:
-    - uses: LuisEnMarroquin/setup-ssh-action@v2.0.0
-      with:
-        SSHKEY: ${{ secrets.DEPLOYER_KEY }}
-    - run: ssh -T git@github.com || true
-    - run: composer require laravel/envoy --dev
-    - run: ls && pwd
-    - run:  ./vendor/bin/envoy run deploy --password ${{ secrets.GITHUB.token }}
+      - uses: actions/checkout@v3
+      - uses: LuisEnMarroquin/setup-ssh-action@v2.0.0
+        with:
+          SSHKEY: ${{ secrets.DEPLOYER_KEY }}
+      - run: composer require laravel/envoy --dev
+      - run: ls && pwd
+      - run:  ./vendor/bin/envoy run deploy --password ${{ secrets.GITHUB.token }}
