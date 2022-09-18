@@ -14,5 +14,6 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOYER_KEY }}
       - run: mkdir -p ~/.ssh
       - run: '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+      - run: cat ~/.ssh/config
       - run: composer require laravel/envoy --dev
       - run:  ./vendor/bin/envoy run deploy
