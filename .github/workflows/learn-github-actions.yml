@@ -9,9 +9,9 @@ jobs:
     container: composer:2.3
     steps:
       - uses: actions/checkout@v3
-      - uses: LuisEnMarroquin/setup-ssh-action@v2.0.0
+      - uses: webfactory/ssh-agent@v0.5.4
         with:
-          SSHKEY: ${{ secrets.DEPLOYER_KEY }}
+          ssh-private-key: ${{ secrets.DEPLOYER_KEY }}
+      - run: '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
       - run: composer require laravel/envoy --dev
-      - run: ls && pwd
-      - run:  ./vendor/bin/envoy run deploy --password ${{ secrets.GITHUB.token }}
+      - run:  ./vendor/bin/envoy run deploy
