@@ -9,7 +9,7 @@
 @endsetup
 
 @story('deploy')
-    echo "we are inside deploy story";
+    echo 'we are inside deploy story'
     clone_repository
     run_composer
     update_symlinks
