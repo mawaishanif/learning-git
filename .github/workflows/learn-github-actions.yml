@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     container: composer:2.3
     steps:
-      - uses: actions/checkout@v3
-      - uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.DEPLOYER_KEY }}
-      - run: composer require laravel/envoy --dev
-      - run:  ./vendor/bin/envoy run deploy --password ${{ secrets.GITHUB.token }}
+    - uses: LuisEnMarroquin/setup-ssh-action@v2.0.0
+      with:
+        SSHKEY: ${{ secrets.DEPLOYER_KEY }}
+    - run: ssh -T git@github.com || true
+    - run: composer require laravel/envoy --dev
+    - run:  ./vendor/bin/envoy run deploy --password ${{ secrets.GITHUB.token }}
