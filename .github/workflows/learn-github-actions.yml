@@ -12,9 +12,6 @@ jobs:
       - uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.DEPLOYER_KEY }}
-      - run: ls -l /root/.ssh
-      # - run: '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-      # - run: cat ~/.ssh/config
       - run: ssh-keyscan -t rsa 165.227.216.24 >> /root/.ssh/known_hosts
       - run: composer require laravel/envoy --dev
-      - run:  ./vendor/bin/envoy run deploy
+      - run:  ./vendor/bin/envoy run deploy --password ${{ secrets.GITHUB_TOKEN }}
