@@ -10,21 +10,19 @@
 
 @story('deploy')
     clone_repository
-    {{-- run_composer
+    run_composer
     update_symlinks
     writeable
     migrate
-    restart_queues --}}
+    restart_queues
 @endstory
 
 @task('clone_repository')
     echo 'Cloning repository'
-    echo {{ $password }};
-    {{-- [ -d {{ $releases_dir }} ] || mkdir {{ $releases_dir }}
+    [ -d {{ $releases_dir }} ] || mkdir {{ $releases_dir }}
     git clone --depth 1 {{ $repository }} {{ $new_release_dir }}
     cd {{ $new_release_dir }}
-    git reset --hard {{ $commit }} --}}
-    
+    git reset --hard {{ $commit }}
 @endtask
 
 @task('writeable')
